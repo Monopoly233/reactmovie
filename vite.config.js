@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/reactmovie/',  // 改成你的仓库名
+  base: '/reactmovie/',  // 确保这里的路径正确
   plugins: [react()],
 })
