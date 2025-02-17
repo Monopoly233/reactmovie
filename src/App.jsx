@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
@@ -17,29 +17,31 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <div className="app">
-          <header>
-            <nav>
-              <Link to="/" className="logo">Movie App</Link>
-              <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/favourites">My Favourites</Link>
-              </div>
-            </nav>
-          </header>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="app">
+            <header>
+              <nav>
+                <Link to="/" className="logo">Movie App</Link>
+                <div className="nav-links">
+                  <Link to="/">Home</Link>
+                  <Link to="/about">About</Link>
+                  <Link to="/favourites">My Favourites</Link>
+                </div>
+              </nav>
+            </header>
 
-          <main>
-            {isLoading && <LoadingSpinner />}
-            <Routes>
-              <Route path="/" element={<Home setIsLoading={setIsLoading} />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/movie/:id" element={<Movie setIsLoading={setIsLoading} />} />
-              <Route path="/favourites" element={<Favourites />} />
-              <Route path="*" element={<div>404 - Page Not Found</div>} />
-            </Routes>
-          </main>
-        </div>
+            <main>
+              {isLoading && <LoadingSpinner />}
+              <Routes>
+                <Route path="/" element={<Home setIsLoading={setIsLoading} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/movie/:id" element={<Movie setIsLoading={setIsLoading} />} />
+                <Route path="/favourites" element={<Favourites />} />
+                <Route path="*" element={<div>404 - Page Not Found</div>} />
+              </Routes>
+            </main>
+          </div>
+        </Suspense>
       </ErrorBoundary>
     </Router>
   )
