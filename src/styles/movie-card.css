@@ -5,7 +5,7 @@
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
-  background: white;
+  background: var(--background-light);
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-color);
@@ -22,7 +22,7 @@
   height: auto;
   aspect-ratio: 2/3;
   object-fit: cover;
-  background-color: #f0f0f0;
+  background-color: var(--border-color);
 }
 
 .movie-card a {
@@ -61,8 +61,8 @@
   width: 100%;
   padding: 0.5rem;
   border: none;
-  background: #f8f9fa;
-  color: #666;
+  background: var(--background-light);
+  color: var(--text-secondary);
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.2s;
@@ -70,16 +70,16 @@
 }
 
 .movie-card .favourite-btn:hover {
-  background: #e9ecef;
+  background: var(--border-color);
 }
 
 .movie-card .favourite-btn.active {
-  background: #dc3545;
-  color: white;
+  background: var(--secondary-color);
+  color: var(--text-light);
 }
 
 .movie-card .favourite-btn.active:hover {
-  background: #c82333;
+  background: var(--secondary-hover);
 }
 
 /* 电影区块 */
@@ -90,7 +90,7 @@
 .movie-section h2 {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--border-color);
   color: var(--text-primary);
 }
 
