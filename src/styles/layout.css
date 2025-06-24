@@ -1,0 +1,93 @@
+/* 应用布局 */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: var(--background-light);
+  min-height: 100vh;
+}
+
+/* 电影网格布局 */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app {
+    max-width: 1400px;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* 页面布局 */
+.favourites-page {
+  padding: 2rem 0;
+}
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* 电影详情页布局 */
+.movie-details {
+  position: relative;
+  min-height: 100vh;
+}
+
+.movie-details .content {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+
+.movie-details .poster {
+  flex-shrink: 0;
+}
+
+/* 响应式电影详情页 */
+@media (max-width: 768px) {
+  .movie-details .content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .movie-details .poster img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about {
+    padding: 1rem;
+  }
+} 

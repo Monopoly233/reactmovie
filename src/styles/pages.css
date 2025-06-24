@@ -1,0 +1,140 @@
+/* 收藏页面 */
+.favourites-page h1 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.empty-favourites {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 8px;
+}
+
+.empty-favourites p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.browse-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.browse-link:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.remove-favourite {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  transition: background-color 0.2s;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.remove-favourite:hover {
+  background: var(--secondary-hover);
+}
+
+/* 关于页面 */
+.about section {
+  margin-bottom: 3rem;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.about p {
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.about ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about li {
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.tmdb-attribution {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.tmdb-logo {
+  margin-top: 1.5rem;
+}
+
+.tmdb-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* 响应式页面 */
+@media (max-width: 768px) {
+  .about h1 {
+    font-size: 1.75rem;
+  }
+  
+  .about h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* 暗色模式页面 */
+@media (prefers-color-scheme: dark) {
+  .empty-favourites,
+  .tmdb-attribution {
+    background: var(--background-dark);
+  }
+
+  .empty-favourites p {
+    color: var(--text-secondary);
+  }
+
+  .about h1,
+  .about h2 {
+    color: var(--text-primary);
+  }
+
+  .about p,
+  .about li {
+    color: var(--text-secondary);
+  }
+} 
