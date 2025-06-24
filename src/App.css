@@ -294,6 +294,11 @@ nav {
 
 .meta p {
   margin: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.movie-details .meta p {
+  margin: 0.5rem 0;
   color: rgba(255, 255, 255, 0.9);
 }
 
