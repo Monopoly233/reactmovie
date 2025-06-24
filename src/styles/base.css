@@ -22,6 +22,19 @@ body {
   background-color: var(--background-light);
 }
 
+/* 确保其他页面的文字颜色正确 */
+.home,
+.favourites-page,
+.about {
+  color: var(--text-primary);
+}
+
+.home *,
+.favourites-page *,
+.about * {
+  color: inherit;
+}
+
 /* 链接样式 */
 a {
   color: inherit;

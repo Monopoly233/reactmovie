@@ -63,10 +63,14 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  color: white;
+  color: white !important;
   max-width: 1200px;
   margin: 0 auto;
   backdrop-filter: blur(8px);
+}
+
+.movie-details .content * {
+  color: inherit;
 }
 
 .movie-details .poster {
