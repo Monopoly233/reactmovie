@@ -63,13 +63,13 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  color: white !important;
+  color: var(--movie-details-text-bright);
   max-width: 1200px;
   margin: 0 auto;
   backdrop-filter: blur(8px);
 }
 
-/* 确保电影详情页内的所有元素都使用白色文字 */
+/* 确保电影详情页内的所有元素都使用主题文字颜色 */
 .movie-details .content h1,
 .movie-details .content h2,
 .movie-details .content h3,
