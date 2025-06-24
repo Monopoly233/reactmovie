@@ -26,12 +26,27 @@ body {
 .home,
 .favourites-page,
 .about {
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 
-.home *,
-.favourites-page *,
-.about * {
+.home h1,
+.home h2,
+.home h3,
+.home p,
+.home span,
+.home div,
+.favourites-page h1,
+.favourites-page h2,
+.favourites-page h3,
+.favourites-page p,
+.favourites-page span,
+.favourites-page div,
+.about h1,
+.about h2,
+.about h3,
+.about p,
+.about span,
+.about div {
   color: inherit;
 }
 

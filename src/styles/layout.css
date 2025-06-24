@@ -69,7 +69,13 @@
   backdrop-filter: blur(8px);
 }
 
-.movie-details .content * {
+/* 确保电影详情页内的所有元素都使用白色文字 */
+.movie-details .content h1,
+.movie-details .content h2,
+.movie-details .content h3,
+.movie-details .content p,
+.movie-details .content span,
+.movie-details .content div {
   color: inherit;
 }
 
