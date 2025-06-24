@@ -1,17 +1,6 @@
 /* 添加颜色变量 */
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary-color: #f43f5e;
-  --secondary-hover: #e11d48;
-  --background-light: #f8fafc;
-  --background-dark: #1e293b;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-light: #f8fafc;
-  --border-color: #e2e8f0;
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  /* 颜色变量现在在 index.css 中定义 */
 }
 
 /* 基础样式更新 */
@@ -510,14 +499,6 @@ nav {
 
 /* 暗色模式支持 */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background-light: #0f172a;
-    --background-dark: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --border-color: #334155;
-  }
-
   .app {
     background-color: var(--background-light);
   }
@@ -537,6 +518,33 @@ nav {
 
   .nav-links a:hover {
     background-color: var(--background-dark);
+  }
+
+  /* 确保在暗色模式下电影卡片内的文字颜色正确 */
+  .movie-info h3 {
+    color: var(--text-primary);
+  }
+
+  .movie-info p {
+    color: var(--text-secondary);
+  }
+
+  .movie-section h2 {
+    color: var(--text-primary);
+  }
+
+  .about h1,
+  .about h2 {
+    color: var(--text-primary);
+  }
+
+  .about p,
+  .about li {
+    color: var(--text-secondary);
+  }
+
+  .empty-favourites p {
+    color: var(--text-secondary);
   }
 }
 
