@@ -1,6 +1,5 @@
 import { useState, Suspense } from 'react'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import './App.css'
 
 // Import page components
 import Home from './pages/Home'
